@@ -146,3 +146,37 @@ c *=2;
 
 Opgave 2.3
 
+double c = sqrt(2);
+double d = sqrt(2);
+
+void setup(){
+}
+
+void draw(){
+c*=d;
+  println(c);
+}
+
+-> 1.9999999315429164
+
+VS
+
+float c = sqrt(2);
+float d = sqrt(2);
+
+void setup(){
+}
+
+void draw(){
+c*=d;
+  println(c);
+}
+-> 1.9999999
+
+Der er mange flere decimaler i en double, så den er mere præcis. 
+
+
+
+Opgave 3.1
+
+
