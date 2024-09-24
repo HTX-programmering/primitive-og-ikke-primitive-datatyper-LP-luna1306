@@ -1,0 +1,182 @@
+Opgave 2.1
+
+Integer: 4 bytes
+Float: 4 bytes
+Character: 2 bytes
+Boolean: 1 byte
+Byte: 1 byte
+Short: 2 bytes
+Long: 8 bytes
+
+
+
+Opgave 2.2.1
+
+float f=sqrt(2)*sqrt(2);
+println(f);
+
+double d=Math.sqrt(2)*Math.sqrt(2);
+println(d);
+
+
+
+Opgave 2.2.2
+
+Integer:
+
+int c= (int)2147483600;
+void setup() {
+  frameRate=120;
+}
+
+void draw() {
+
+  println(c);
+ c+=1;
+  println(Integer.valueOf(c));
+}
+
+
+Float:
+
+Jo større et tal i en float jo mere upræcis bliver den. Derfor ville værdien i float ikke ændre sig hvis man +1 hvis værdien er tilstrækkelig stor. Den ville tilgængæld ændre sig hvis man +100. Det kan man se i eksemplet her: 
+
+float c = 16777214;
+
+void setup() {
+  frameRate = 1;
+}
+
+void draw() {
+  println(c);  
+  c += 1;      
+  println(c);  
+}
+
+VS
+
+float c = 16777214;
+
+void setup() {
+  frameRate = 1;
+}
+
+void draw() {
+  println(c);  
+  c += 100;      
+  println(c);  
+}
+
+Det betyder også at float ikke direkter har en maksimum værdi. Den når bare til et sted, hvor uanset hvor stort et nummer man plusser/ganger med vil værdien ikke ændre sig. Den går til positiv uendelighed. 
+
+float c = Float.MAX_VALUE;
+
+void setup() {
+  frameRate = 1;
+}
+
+void draw() {
+  println(c);  
+  c *= 2;      
+  println(c);  
+}
+
+
+Character:
+
+char c= (char)65040;
+void setup() {
+  frameRate=120;
+}
+
+void draw() {
+
+  println(c);
+ c+=1;
+  println(Integer.valueOf(c));
+}
+
+
+Boolean:
+
+There isn't really a maximum or minimum value to boolean since it's like 0 and 1. True and false. There's only two options.
+
+
+Byte:
+
+byte c= (byte)Byte.MAX_VALUE;
+void setup() {
+  frameRate=120;
+}
+
+void draw() {
+
+  println(c);
+ c+=1;
+  println(Integer.valueOf(c));
+}
+
+
+Short:
+
+Short c= (int)32760;
+void setup() {
+  frameRate=120;
+}
+
+void draw() {
+c++;
+  println(Integer.valueOf(c));
+}
+
+
+Long:
+
+long c= 922337203;
+void setup() {
+  frameRate=120;
+}
+
+void draw() {
+c *=2;
+  println(c);
+}
+
+
+
+Opgave 2.3
+
+double c = sqrt(2);
+double d = sqrt(2);
+
+void setup(){
+}
+
+void draw(){
+c*=d;
+  println(c);
+}
+
+-> 1.9999999315429164
+
+VS
+
+float c = sqrt(2);
+float d = sqrt(2);
+
+void setup(){
+}
+
+void draw(){
+c*=d;
+  println(c);
+}
+-> 1.9999999
+
+Der er mange flere decimaler i en double, så den er mere præcis. 
+
+
+
+Opgave 3.1
+
+
